@@ -1,0 +1,40 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local UIStroke = Instance.new("UIStroke")
+
+ScreenGui.Parent = game.CoreGui
+
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Main.Position = UDim2.new(0.35, 0, 0.3, 0)
+Main.Size = UDim2.new(0, 420, 0, 280)
+Main.Active = true
+Main.Draggable = true
+
+UIStroke.Parent = Main
+UIStroke.Color = Color3.fromRGB(255, 0, 0)
+UIStroke.Thickness = 2
+
+Title.Parent = Main
+Title.Size = UDim2.new(1, 0, 0, 40)
+Title.Text = "Foxname Hub | 99 Nights"
+Title.TextColor3 = Color3.fromRGB(255, 0, 0)
+Title.BackgroundTransparency = 1
+Title.Font = Enum.Font.GothamBold
+Title.TextSize = 20
+
+-- Button mẫu
+local Button = Instance.new("TextButton")
+Button.Parent = Main
+Button.Position = UDim2.new(0.1, 0, 0.3, 0)
+Button.Size = UDim2.new(0, 300, 0, 40)
+Button.Text = "Test Button"
+Button.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.Font = Enum.Font.Gotham
+Button.TextSize = 16
+
+Button.MouseButton1Click:Connect(function()
+    print("Button clicked!")
+end)
